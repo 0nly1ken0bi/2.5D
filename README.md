@@ -1,7 +1,7 @@
 ## CANONICAL SPECIFICATION — 2.5D Facial System
-
-**Status:** LOCKED / AUTHORITATIVE  
-**Purpose:** Single source of truth for architecture, contracts, invariants, and execution order.
+> [!NOTE]
+> **Status:** LOCKED / AUTHORITATIVE  
+> **Purpose:** Single source of truth for architecture, contracts, invariants, and execution order.
 
 ---
 
