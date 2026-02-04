@@ -1,11 +1,11 @@
-# CANONICAL SPECIFICATION — 2.5D Facial System
+## CANONICAL SPECIFICATION — 2.5D Facial System
 
 **Status:** LOCKED / AUTHORITATIVE  
 **Purpose:** Single source of truth for architecture, contracts, invariants, and execution order.
 
 ---
 
-## 0. Scope & Philosophy
+### 0. Scope & Philosophy
 
 This project defines a **deterministic 2.5D facial animation system** built from a single neutral image and canonical landmarks.
 
@@ -18,7 +18,7 @@ Core principles:
 
 ---
 
-## AXIS 1 — SPATIAL / ANATOMICAL OWNERSHIP (TREE)
+### AXIS 1 — SPATIAL / ANATOMICAL OWNERSHIP (TREE)
 
 This axis defines **who owns space**. Child nodes inherit transforms from parents. No child may mutate ancestor state.
 
@@ -54,7 +54,7 @@ Neutral_Image/
                                 └── tongue_cavity_layer.py
 ```
 
-### Ownership Rules
+#### Ownership Rules
 - `head_landmarks.py` is immutable truth
 - `head_warp.py` defines skull/world transform
 - Jaw owns all mandible motion
@@ -63,7 +63,7 @@ Neutral_Image/
 
 ---
 
-## AXIS 2 — EXECUTION / EVALUATION PIPELINE
+### AXIS 2 — EXECUTION / EVALUATION PIPELINE
 
 This axis defines **when things are evaluated**. Order is strict and non-negotiable.
 
@@ -90,9 +90,9 @@ Nothing may execute out of order. Later stages may **read** earlier outputs only
 
 ---
 
-## AXIS 3 — DATA CONTRACTS & INVARIANTS
+### AXIS 3 — DATA CONTRACTS & INVARIANTS
 
-### Canonical Landmarks
+#### Canonical Landmarks
 - Normalized coordinates (0–1)
 - Immutable after validation
 - Explicit semantic naming (no indices-only usage)
@@ -107,7 +107,7 @@ Violations must raise explicit errors (never silent clamps).
 
 ---
 
-## AXIS 4 — VISeme SYSTEM (TEMPORAL DOMAIN)
+### AXIS 4 — VISeme SYSTEM (TEMPORAL DOMAIN)
 
 Visemes are **not anatomy**. They operate after spatial resolution.
 
@@ -125,7 +125,7 @@ Rules:
 
 ---
 
-## ASSETS CONTRACT
+### ASSETS CONTRACT
 
 ```Ruby
 assets/
@@ -139,22 +139,22 @@ Assets are passive data. No logic lives here.
 
 ---
 
-## TESTING CONTRACT
+### TESTING CONTRACT
 
 Tests assert **invariants**, not visuals.
-
-- `phase0/` — sanity & neutrality
-- `phase1/` — canonical contracts
+> [!NOTE]
+> - `phase0/` — sanity & neutrality
+> - `phase1/` — canonical contracts
 
 Tests are frozen once spec is locked.
 
 ---
 
-## FINAL AUTHORITY
-
+### FINAL AUTHORITY
+> [!IMPORTANT]
 If:
-- Code disagrees with this spec → code is wrong
-- Tests disagree with this spec → tests are wrong
+> - Code disagrees with this spec → code is wrong
+> - Tests disagree with this spec → tests are wrong
 
 This document is the **final authority** for the 2.5D project.
 
