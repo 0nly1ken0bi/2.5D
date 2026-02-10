@@ -1,0 +1,24 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.venv
+/.vs/2.5D/FileContentIndex
+/not needed
+/venv/Lib/site-packages/absl/logging
+/venv/Lib/site-packages/absl/__pycache__
+/venv/Lib/site-packages/absl/testing/__pycache__
+/venv/Lib/site-packages/absl/testing
+/venv
+/__pycache__
+/tests/phase1/__pycache__
+/tests/phase0/__pycache__
+/tests/__pycache__
+/dir
+/phase1/__pycache__
+/phase0/__pycache__
+/models/__pycache__
+/debug/__pycache__
+/canonical/__pycache__
+/.vs
+/python
